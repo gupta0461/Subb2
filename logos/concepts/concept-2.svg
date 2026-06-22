@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="subb2">
+  <defs>
+    <linearGradient id="tileGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D28D9"/>
+      <stop offset="1" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  <g id="icon">
+    <!-- App-style rounded-square tile -->
+    <rect x="96" y="96" width="320" height="320" rx="76" fill="url(#tileGrad)"/>
+
+    <!-- Custom geometric numeral "2": top hook + descending stem -->
+    <path fill="#FFFFFF" d="
+      M 195 205
+      a 61 61 0 0 1 122 1
+      q 0 39 -33 67
+      L 252 322
+      L 206 322
+      L 263 271
+      q 23 -20 23 -49
+      a 24 24 0 0 0 -48 -1
+      Z"/>
+
+    <!-- Bottom bar of the 2 with a subtle ascending angle to imply growth -->
+    <path fill="#FFFFFF" d="
+      M 195 332
+      L 326 314
+      L 326 362
+      L 195 362
+      Z"/>
+  </g>
+
+  <g id="wordmark">
+    <text x="476" y="256" dominant-baseline="central"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="200" font-weight="700"
+          letter-spacing="-10" fill="#2A1147">subb2</text>
+  </g>
+</svg>

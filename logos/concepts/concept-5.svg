@@ -1,0 +1,28 @@
+<svg viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="subb2">
+  <g id="icon">
+    <!-- Rounded-square tile -->
+    <rect x="96" y="116" width="280" height="280" rx="72" fill="#047857"/>
+    <!-- Bold geometric 's' monogram built from two interlocking strokes -->
+    <path d="M306 196
+             a64 64 0 0 0 -64 -36
+             h-36
+             a40 40 0 0 0 0 80
+             h44
+             a40 40 0 0 1 0 80
+             h-40
+             a64 64 0 0 1 -64 -36"
+          fill="none" stroke="#F8FAF5" stroke-width="40" stroke-linecap="round"/>
+    <!-- Content/earnings cue: play triangle nested in the negative space of the 's' bend -->
+    <path d="M232 238 L266 256 L232 274 Z" fill="#F8FAF5"/>
+  </g>
+
+  <g id="wordmark">
+    <text x="416" y="256"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="180"
+          font-weight="700"
+          letter-spacing="-8"
+          fill="#052E22"
+          dominant-baseline="central">subb2</text>
+  </g>
+</svg>

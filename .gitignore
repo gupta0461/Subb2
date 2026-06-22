@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# Private reservation submissions (contains PII)
+reservations.csv
+
+# Generated screenshots
+temporary screenshots/
+
+# Python cache
+__pycache__/
+*.pyc

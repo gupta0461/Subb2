@@ -1,0 +1,19 @@
+<svg viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="subb2">
+  <g id="icon">
+    <!-- Bold tilted send-arrow / paper-plane abstracted into an upward 's' growth motion -->
+    <!-- Teal body -->
+    <path fill="#0EA5A4" d="M104 372 L356 132 L292 392 L226 318 Z" />
+    <!-- Bright cyan highlight facet for dimension -->
+    <path fill="#22D3EE" d="M356 132 L226 318 L226 248 Z" />
+    <!-- Upward motion tail wedge implying members flowing in -->
+    <path fill="#0EA5A4" d="M104 372 L226 318 L184 412 Z" opacity="0.55" />
+  </g>
+  <g id="wordmark">
+    <text x="408" y="312"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="216"
+          font-weight="700"
+          letter-spacing="-10"
+          fill="#0F172A">subb2</text>
+  </g>
+</svg>

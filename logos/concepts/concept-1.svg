@@ -1,0 +1,24 @@
+<svg viewBox="0 0 1024 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="subb2">
+  <g id="icon">
+    <!-- Rounded-square container -->
+    <rect x="64" y="128" width="256" height="256" rx="64" fill="#0E7C66"/>
+    <!-- One link connecting two nodes -->
+    <g id="link">
+      <!-- Connecting line between the two nodes -->
+      <line x1="146" y1="256" x2="238" y2="256" stroke="#0B2A24" stroke-width="20" stroke-linecap="round"/>
+      <!-- Left node (creator) -->
+      <circle cx="146" cy="256" r="38" fill="#0B2A24"/>
+      <circle cx="146" cy="256" r="18" fill="#14B88A"/>
+      <!-- Right node (community) -->
+      <circle cx="238" cy="256" r="38" fill="#14B88A"/>
+      <circle cx="238" cy="256" r="18" fill="#0B2A24"/>
+    </g>
+  </g>
+
+  <g id="wordmark">
+    <text x="372" y="256" dominant-baseline="central"
+          font-family="Helvetica, Arial, sans-serif"
+          font-size="180" font-weight="700"
+          letter-spacing="-8" fill="#0B2A24">subb<tspan fill="#14B88A">2</tspan></text>
+  </g>
+</svg>
