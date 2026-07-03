@@ -10,6 +10,9 @@ node_modules/
 # Private reservation submissions (contains PII)
 reservations.csv
 
+# Feedback submissions (contains PII)
+feedback.csv
+
 # Generated screenshots
 temporary screenshots/
 
