@@ -30,12 +30,20 @@
     --ease:cubic-bezier(.2,.7,.2,1);
   }
 
+  *, *::before, *::after{ box-sizing:border-box; }
   *{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-  html{ scroll-behavior:smooth; }
+  html{
+    scroll-behavior:smooth;
+    /* stop iOS Safari from auto-inflating text and distorting the tuned layout */
+    -webkit-text-size-adjust:100%; text-size-adjust:100%;
+    /* contain decorative bleed at the root so phones don't zoom the page out to fit it.
+       `clip` avoids creating a scroll container (keeps the sticky nav working); `hidden` is the fallback for old iOS. */
+    overflow-x:hidden; overflow-x:clip;
+  }
   body{
     background:var(--paper); color:var(--ink-soft);
     font-family:'Inter',sans-serif; line-height:1.65; letter-spacing:-0.006em;
-    overflow-x:hidden;
+    overflow-x:hidden; overflow-x:clip;
   }
   ::selection{ background:#1C1C1D; color:#fff; }
 
@@ -122,11 +130,61 @@
   }
   .nav-cta:hover{ transform:translateY(-1px); border-color:#D4D4D4; box-shadow:0 9px 20px -11px rgba(28,28,29,.45); }
   .nav-cta:active{ transform:translateY(0); }
-  /* on mobile keep only the highest-value link (FAQ) in the nav */
-  @media(max-width:659px){ .nav-links a:not(.nav-faq){ display:none; } }
+  /* mobile: full-width bar — brand left, CTA + hamburger right, links in a dropdown */
+  .nav-burger{ display:none; }
+  .nav-menu{ display:none; }
+  @media(max-width:659px){
+    /* no bar at all: brand, CTA, and burger float directly on the page background.
+       Static (not sticky) so transparent elements never overlap scrolled content. */
+    .nav{ position:static; padding-top:0; }
+    .nav-center{ position:relative; padding-inline:16px; }
+    .nav-inner{
+      display:flex; width:100%; justify-content:space-between; gap:8px;
+      background:transparent; border:none; box-shadow:none; border-radius:0;
+      backdrop-filter:none; -webkit-backdrop-filter:none;
+      padding:11px 0;
+    }
+    .brand{ font-size:1.12rem; }
+    .nav-links{ display:none; }
+    .nav-cta{
+      margin-left:auto;
+      background:var(--ink); color:#fdfcf7; border-color:transparent;
+      padding:10px 20px; font-size:.92rem;
+      box-shadow:0 12px 26px -14px rgba(28,28,29,.7);
+    }
+    .nav-cta:hover, .nav-cta:active{ background:#000; border-color:transparent; }
+    .nav-burger{
+      display:grid; place-items:center; width:38px; height:38px; flex:none;
+      border:none; background:transparent; border-radius:999px; color:var(--ink); cursor:pointer;
+      transition:background-color .2s var(--ease);
+    }
+    .nav-burger:hover, .nav-burger:active{ background:var(--sunk); }
+    .nav-burger svg{ width:21px; height:21px; }
+    .nav-menu{
+      pointer-events:auto; position:absolute; top:calc(100% + 6px); left:16px; right:16px; z-index:60;
+      display:flex; flex-direction:column; gap:2px; padding:8px;
+      background:var(--surface); border:1px solid var(--line); border-radius:18px;
+      box-shadow:var(--shadow-float);
+    }
+    .nav-menu[hidden]{ display:none; }
+    .nav-menu a{
+      font-family:'Plus Jakarta Sans'; font-weight:600; font-size:.95rem; color:var(--ink);
+      padding:12px 14px; border-radius:12px; letter-spacing:-0.01em;
+      transition:background-color .2s var(--ease);
+    }
+    .nav-menu a:hover, .nav-menu a:active{ background:var(--sunk); }
+  }
 
   /* ---------- hero ---------- */
   .hero{ position:relative; padding-top:clamp(40px,6vw,72px); padding-bottom:clamp(56px,8vw,104px); text-align:center; }
+  /* on phones, let the hero own the first screen so the next section doesn't peek in above the fold */
+  @media(max-width:659px){
+    .hero{
+      display:flex; flex-direction:column; justify-content:center;
+      /* 100svh minus the sticky nav (~72px incl. its top padding) */
+      min-height:calc(100vh - 72px); min-height:calc(100svh - 72px);
+    }
+  }
   .hero-glow{ position:absolute; inset:0; z-index:-1; pointer-events:none; }
   .hero-glow::before{
     content:""; position:absolute; top:-22%; left:50%; transform:translateX(-50%);
@@ -139,6 +197,7 @@
   }
   .pill{
     display:inline-flex; align-items:center; gap:9px; margin-inline:auto;
+    max-width:100%; flex-wrap:wrap; justify-content:center; text-align:center;
     background:var(--surface); border:1px solid var(--line); border-radius:999px;
     padding:7px 8px 7px 14px; font-size:.82rem; font-weight:500; color:var(--ink-soft);
     box-shadow:var(--shadow-card);
@@ -747,7 +806,7 @@
   @keyframes modalpop{ from{ opacity:0; transform:translateY(16px) scale(.97); } to{ opacity:1; transform:none; } }
   .modal-close{ position:absolute; top:16px; right:16px; width:34px; height:34px; border-radius:50%; border:1px solid var(--line); background:var(--surface); display:grid; place-items:center; color:var(--muted); cursor:pointer; transition:color .2s, border-color .2s, background-color .2s; }
   .modal-close:hover{ color:var(--ink); border-color:#D4D4D4; background:var(--sunk); }
-  .modal-eyebrow{ font-family:'JetBrains Mono'; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ok); font-weight:600; }
+  .modal-eyebrow{ display:block; padding-right:44px; font-family:'JetBrains Mono'; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ok); font-weight:600; }
   .modal-card h3{ font-family:'Plus Jakarta Sans'; font-weight:700; font-size:1.5rem; letter-spacing:-0.03em; color:var(--ink); margin-top:10px; line-height:1.15; }
   .modal-card .msub{ font-size:.92rem; color:var(--muted); margin-top:8px; line-height:1.55; }
   .form-grid{ display:grid; gap:14px; margin-top:22px; }
@@ -908,8 +967,9 @@
 
   @media(max-width:560px){
     .final-card{ padding-left:18px; padding-right:18px; }
-    /* stack the handle: subb2.com/ + field on top, full-width button below */
-    .handle{ flex-wrap:wrap; }
+    /* stack the handle: subb2.com/ + field on top, full-width button below.
+       A two-row capsule reads as a broken blob, so square it into a card. */
+    .handle{ flex-wrap:wrap; border-radius:22px; padding:10px; row-gap:8px; }
     .handle .pre{ padding-left:6px; font-size:.84rem; }
     .handle input{ font-size:.84rem; }
     .handle .btn{ flex:1 0 100%; width:100%; justify-content:center; white-space:normal; padding:13px 16px; }
@@ -937,7 +997,17 @@
         <a href="#faq" class="nav-faq">FAQ</a>
       </div>
       <a href="#final" class="nav-cta" data-reserve="hero">Reserve</a>
+      <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/>
+        </svg>
+      </button>
     </nav>
+    <div class="nav-menu" id="nav-menu" hidden>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </div>
   </div>
 </header>
 
@@ -1789,6 +1859,25 @@
 (function(){
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ----- mobile nav menu -----
+  var burger = document.querySelector('.nav-burger');
+  var navMenu = document.getElementById('nav-menu');
+  if(burger && navMenu){
+    function setMenu(open){
+      navMenu.hidden = !open;
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    burger.addEventListener('click', function(){ setMenu(navMenu.hidden); });
+    navMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+    document.addEventListener('click', function(e){
+      if(!navMenu.hidden && !navMenu.contains(e.target) && !burger.contains(e.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && !navMenu.hidden){ setMenu(false); burger.focus(); }
+    });
+  }
 
   // ----- FAQ accordion -----
   document.querySelectorAll('.faq-q').forEach(function(btn){
