@@ -204,6 +204,21 @@
   }
   .pill .tag{ font-family:'JetBrains Mono'; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; font-weight:600; color:#9a7b16; background:linear-gradient(180deg,#FCEDC9,#F6DBA0); border:1px solid #EAD7A0; border-radius:999px; padding:3px 9px; }
   .pill b{ color:var(--ink); font-weight:600; }
+  .pill .pill-short{ display:none; }
+  /* phones: swap to compact copy so the pill stays a slim single line, never a wrapped blob */
+  @media(max-width:659px){
+    /* no capsule on phones: gold tag + compact copy float directly on the background */
+    .pill{
+      flex-wrap:nowrap; white-space:nowrap; font-size:.8rem;
+      background:transparent; border:none; box-shadow:none; padding:0;
+    }
+    .pill .pill-full{ display:none; }
+    .pill .pill-short{ display:inline; }
+  }
+  @media(max-width:374px){
+    .pill{ font-size:.74rem; gap:7px; }
+    .pill .tag{ font-size:.56rem; padding:3px 7px; }
+  }
 
   /* rotating platform word in the H1 */
   .rotator{ display:inline-grid; position:relative; vertical-align:bottom; perspective:700px; text-align:center; }
@@ -1019,7 +1034,8 @@
     <div class="wrap">
       <div class="pill reveal" role="note">
         <span class="tag">Early access</span>
-        <span>Pilot program · Full year free for first <b>10 creators</b></span>
+        <span class="pill-full">Pilot program · Full year free for first <b>10 creators</b></span>
+        <span class="pill-short">1 year free · first <b>10 creators</b></span>
       </div>
 
       <h1 class="h1 reveal" style="margin:26px auto 0;max-width:21ch;">
