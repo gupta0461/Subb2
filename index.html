@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Subb2 · Monetize your WhatsApp, Discord or Telegram community in under 2 minutes</title>
-<meta name="description" content="Set your price once and share a single link. Subb2 runs the checkout, collects recurring payments, and syncs members automatically across Telegram, WhatsApp and Discord." />
+<meta name="description" content="Set your price and share your link. Subb2 handles checkout, recurring payments, and member syncing across Telegram, WhatsApp and Discord." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2316150F'/%3E%3Ccircle cx='22.5' cy='10.5' r='3.6' fill='%2315915E'/%3E%3Ctext x='8' y='23' font-family='Verdana,Arial' font-size='15' font-weight='700' fill='%23FCFBF8'%3ES%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -226,8 +226,8 @@
     animation:rotword 12s cubic-bezier(.2,.7,.2,1) infinite;
   }
   .rword.w1{ color:#1FA855; animation-delay:0s; }   /* WhatsApp */
-  .rword.w2{ color:#5865F2; animation-delay:3s; }    /* Discord  */
-  .rword.w4{ color:#1E96D1; animation-delay:9s; }    /* Telegram */
+  .rword.w2{ color:#5865F2; animation-delay:4s; }    /* Discord  */
+  .rword.w4{ color:#1E96D1; animation-delay:8s; }    /* Telegram */
   @keyframes rotword{
     0%   { opacity:0; transform:rotateX(96deg); }
     4%   { opacity:1; transform:rotateX(0deg); }
@@ -1069,7 +1069,7 @@
       </h1>
 
       <p class="lead reveal" style="margin:22px auto 0;max-width:62ch;">
-        Set your price once and share a single link. Subb2 runs the checkout, collects recurring payments, and syncs members automatically across Telegram, WhatsApp and Discord.
+        Set your price and share your link. Subb2 handles checkout, recurring payments, and member syncing across Telegram, WhatsApp and Discord.
       </p>
 
       <!-- primary CTA: handle reservation field -->
@@ -1580,7 +1580,6 @@
             <span class="chip" title="Visa"><svg class="chip-logo" viewBox="0 0 24 24" fill="#1A1F71"><path d="M9.112 8.262 5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 0 1 .894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 0 1 1.913.336l.34-1.59a5.207 5.207 0 0 0-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 0 0-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656 1.02-2.815.588 2.815z"/></svg></span>
             <span class="chip" title="Mastercard"><svg class="chip-logo" viewBox="0 0 24 24"><circle cx="9" cy="12" r="6.4" fill="#EB001B"/><circle cx="15" cy="12" r="6.4" fill="#F79E1B"/><path d="M12 7.1a6.4 6.4 0 0 0 0 9.8 6.4 6.4 0 0 0 0-9.8z" fill="#FF5F00"/></svg></span>
                             <span class="chip" title="American Express"><svg class="chip-logo" viewBox="0 0 34 24"><rect width="34" height="24" rx="4" fill="#1F72CD"/><text x="17" y="15.6" font-size="7" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="0.3">AMEX</text></svg></span>
-            <span class="chip" style="color:var(--ink);font-weight:600">7-day trial</span>
           </div>
         </article>
 
@@ -1690,43 +1689,39 @@
         <!-- items injected pattern -->
         <div class="faq-item" data-open="true">
           <button class="faq-q" aria-expanded="true"><span>How does it work?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>We've built integrations with WhatsApp, Discord and Telegram to sync your members and collect recurring payments automatically. So all you do is connect your community to Subb2, set your price, and share your link (subb2.com/yourname). When someone taps it, they land on your page and set up a recurring payment. Payment received, we add them. Payment missed, we remove them. You do nothing else. No spreadsheets, no "please pay" DMs.</p></div></div>
+          <div class="faq-a"><div class="faq-a-inner"><p>Connect your community, set your price, share your link. Members tap it, pay once, and join automatically. Payments fail, they're removed. No spreadsheets, no manual work.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
-          <button class="faq-q" aria-expanded="false"><span>What is the pilot program, and what do creators get in return?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>We're building Subb2 right now, and we're hand-picking our first 10 creators to build it with us. All we ask is your honest feedback: what works, what doesn't, what's missing. In return, Subb2 is free for your first 6 months, along with hands-on support whenever you need it.</p></div></div>
-        </div>
-        <div class="faq-item" data-open="false">
-          <button class="faq-q" aria-expanded="false"><span>What will Subb2 charge me after the pilot ends?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>As a pilot creator, you're sharing you valuable time, trust, and the honest feedback that makes this platform what it is. We never want to lose sight of that. So, when the pilot phase ends, we’ll sit down and set your price together. We only want to charge what you feel our service is genuinely worth to you.</p></div></div>
+          <button class="faq-q" aria-expanded="false"><span>What's the Early Access program?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner"><p>We're building Subb2 with our first creators. You get free access for 6 months and direct support. In return, we get your feedback on what works, what doesn't, what's missing.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
           <button class="faq-q" aria-expanded="false"><span>How do I manage my members' subscriptions and receive payouts?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>Through your own Stripe account. You connect it to Subb2 once, and every subscriber payment goes straight into your account, not ours. Subb2 handles the rest: subscriptions, access, and adding and removing members.</p></div></div>
+          <div class="faq-a"><div class="faq-a-inner"><p>Connect your Stripe account once. All payments go straight to you, while Subb2 handles member syncing and access control.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
           <button class="faq-q" aria-expanded="false"><span>How do my community members pay and join?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>They tap your subb2.com/username link, land on your page, and pay with Apple Pay, Google Pay, or a card. The moment the payment goes through, they're added to your community on WhatsApp, Discord or Telegram.</p></div></div>
+          <div class="faq-a"><div class="faq-a-inner"><p>They click your link, pay with Apple Pay, Google Pay, or card, and join instantly on WhatsApp, Discord or Telegram.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
           <button class="faq-q" aria-expanded="false"><span>What payment methods can my community members use?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>Apple Pay, Google Pay, and all major credit and debit cards: Visa, Mastercard, and American Express.</p></div></div>
+          <div class="faq-a"><div class="faq-a-inner"><p>Apple Pay, Google Pay, and all major cards: Visa, Mastercard, Amex.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
-          <button class="faq-q" aria-expanded="false"><span>How do my community members cancel their subscription to my community?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>Every subscriber of your community has their own Subb2 account. There they can see all the creators they've subscribed to and cancel any plan themselves, anytime.</p></div></div>
+          <button class="faq-q" aria-expanded="false"><span>How do my community members cancel their subscription?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner"><p>They log into their Subb2 account and cancel anytime. No questions, no lock-in.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
           <button class="faq-q" aria-expanded="false"><span>What happens when a member's payment fails or they cancel?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>The moment a payment fails or a subscription is cancelled, that member loses access to your community, so your content stays exclusive to the people who actually pay. If they pay again, they're added right back.</p></div></div>
+          <div class="faq-a"><div class="faq-a-inner"><p>They lose access instantly. Content stays exclusive to paying members. If they re-subscribe later, they're added back immediately.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
           <button class="faq-q" aria-expanded="false"><span>What if I get flagged or banned on Telegram, WhatsApp or Discord?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>Your community belongs to you, not the platform you host it on. You can instantly export your complete list of members—along with their contact info and active plans so that you don't have to start over again from scratch</p></div></div>
+          <div class="faq-a"><div class="faq-a-inner"><p>Export your entire member list with contact info and active plans. Your community stays yours, not the platform's.</p></div></div>
         </div>
         <div class="faq-item" data-open="false">
           <button class="faq-q" aria-expanded="false"><span>Can I stop using Subb2 whenever I want?</span><span class="faq-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner"><p>Yes, anytime. Subb2 is month to month with no lock-in. Export your subscriber list, take everything you've built.</p></div></div>
+          <div class="faq-a"><div class="faq-a-inner"><p>Yes, anytime. Month-to-month, no lock-in. Export your data and go.</p></div></div>
         </div>
       </div>
     </div>
