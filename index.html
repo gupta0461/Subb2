@@ -926,40 +926,40 @@
   @media(max-width:520px){ .mp-event{ display:none; } }
 
   /* ---------- feature viz: UPI AutoPay mandate (realistic billing view) ---------- */
-  .ad{ margin-top:18px; background:var(--paper); border:1px solid var(--line-2); border-radius:16px; overflow:hidden; box-shadow:0 1px 2px rgba(28,28,29,.03); }
-  .ad-bar{ display:flex; align-items:center; gap:11px; padding:13px 14px; background:var(--surface); border-bottom:1px solid var(--line-2); }
-  .ad-ic{ width:36px; height:36px; border-radius:11px; display:grid; place-items:center; background:var(--ok-bg); border:1px solid var(--ok-line); color:var(--ok); flex:none; }
-  .ad-ic svg{ width:19px; height:19px; }
-  .ad-title{ font-family:'Plus Jakarta Sans'; font-weight:700; font-size:1rem; color:var(--ink); letter-spacing:-0.02em; display:flex; align-items:baseline; gap:5px; }
-  .ad-per{ font-family:'Plus Jakarta Sans'; font-weight:600; font-size:.7rem; color:var(--faint); letter-spacing:0; }
-  .ad-upi{ font-family:'JetBrains Mono'; font-size:.52rem; letter-spacing:.07em; font-weight:600; color:#0E8345; background:var(--ok-bg); border:1px solid var(--ok-line); border-radius:5px; padding:2px 5px; white-space:nowrap; }
-  .ad-sub{ font-size:.7rem; color:var(--faint); margin-top:3px; display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
-  .ad-state{ margin-left:auto; align-self:flex-start; font-family:'JetBrains Mono'; font-size:.56rem; letter-spacing:.08em; text-transform:uppercase; font-weight:600; color:var(--ok); background:var(--ok-bg); border:1px solid var(--ok-line); border-radius:999px; padding:4px 9px; display:inline-flex; align-items:center; gap:5px; flex:none; }
-  .ad-state i{ width:5px; height:5px; border-radius:50%; background:var(--ok); display:block; }
-  .ad-list{ display:flex; flex-direction:column; }
-  .ad-row{ display:flex; align-items:center; gap:11px; padding:10px 14px; border-top:1px solid var(--line-2); }
-  .ad-row.next{ background:var(--ok-bg); }
-  .ad-check{ width:24px; height:24px; border-radius:50%; display:grid; place-items:center; flex:none; }
-  .ad-check.ok{ background:#fff; border:1px solid var(--ok-line); color:var(--ok); }
-  .ad-check.up{ background:#fff; border:1px dashed #C9C9C9; color:var(--faint); }
-  .ad-check svg{ width:12px; height:12px; }
-  .ad-when{ min-width:0; }
-  .ad-date{ font-family:'JetBrains Mono'; font-size:.74rem; font-weight:600; color:var(--ink-soft); }
-  .ad-txn{ font-family:'JetBrains Mono'; font-size:.58rem; color:var(--faint); margin-top:1px; }
-  .ad-right{ margin-left:auto; text-align:right; flex:none; }
-  .ad-amt{ font-family:'Plus Jakarta Sans'; font-weight:700; font-size:.88rem; color:var(--ink); letter-spacing:-0.02em; }
-  .ad-st{ font-family:'JetBrains Mono'; font-size:.54rem; letter-spacing:.05em; text-transform:uppercase; font-weight:600; margin-top:1px; }
-  .ad-st.ok{ color:var(--ok); } .ad-st.up{ color:var(--faint); } .ad-st.fail{ color:var(--off); }
-  .ad-check.fail{ background:#fff; border:1px solid #E7CABF; color:var(--off); }
-  .ad-state.off{ color:var(--off); background:var(--off-bg); border-color:#E7CABF; }
-  .ad-state.off i{ background:var(--off); }
-  .ad-ava{ width:36px; height:36px; border-radius:50%; display:grid; place-items:center; flex:none; font-family:'Plus Jakarta Sans'; font-weight:700; font-size:.8rem; color:#fff; }
-  .ad-name{ font-family:'Plus Jakarta Sans'; font-weight:700; font-size:.92rem; color:var(--ink); letter-spacing:-0.02em; }
-  .ad-name .ad-handle{ font-family:'JetBrains Mono'; font-weight:400; font-size:.62rem; color:var(--faint); letter-spacing:0; margin-left:5px; }
-  .ad-row.removed{ background:var(--off-bg); }
-  .ad-flag{ font-family:'JetBrains Mono'; font-size:.58rem; color:var(--off); font-weight:600; margin-top:1px; }
-  .ad-foot{ display:flex; align-items:center; gap:8px; padding:12px 14px; border-top:1px solid var(--line-2); background:var(--surface); font-size:.74rem; color:var(--muted); }
-  .ad-foot svg{ width:15px; height:15px; color:var(--ok); flex:none; }
+  .bill{ margin-top:18px; background:var(--paper); border:1px solid var(--line-2); border-radius:16px; overflow:hidden; box-shadow:0 1px 2px rgba(28,28,29,.03); }
+  .bill-bar{ display:flex; align-items:center; gap:11px; padding:13px 14px; background:var(--surface); border-bottom:1px solid var(--line-2); }
+  .bill-ic{ width:36px; height:36px; border-radius:11px; display:grid; place-items:center; background:var(--ok-bg); border:1px solid var(--ok-line); color:var(--ok); flex:none; }
+  .bill-ic svg{ width:19px; height:19px; }
+  .bill-title{ font-family:'Plus Jakarta Sans'; font-weight:700; font-size:1rem; color:var(--ink); letter-spacing:-0.02em; display:flex; align-items:baseline; gap:5px; }
+  .bill-per{ font-family:'Plus Jakarta Sans'; font-weight:600; font-size:.7rem; color:var(--faint); letter-spacing:0; }
+  .bill-upi{ font-family:'JetBrains Mono'; font-size:.52rem; letter-spacing:.07em; font-weight:600; color:#0E8345; background:var(--ok-bg); border:1px solid var(--ok-line); border-radius:5px; padding:2px 5px; white-space:nowrap; }
+  .bill-sub{ font-size:.7rem; color:var(--faint); margin-top:3px; display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+  .bill-state{ margin-left:auto; align-self:flex-start; font-family:'JetBrains Mono'; font-size:.56rem; letter-spacing:.08em; text-transform:uppercase; font-weight:600; color:var(--ok); background:var(--ok-bg); border:1px solid var(--ok-line); border-radius:999px; padding:4px 9px; display:inline-flex; align-items:center; gap:5px; flex:none; }
+  .bill-state i{ width:5px; height:5px; border-radius:50%; background:var(--ok); display:block; }
+  .bill-list{ display:flex; flex-direction:column; }
+  .bill-row{ display:flex; align-items:center; gap:11px; padding:10px 14px; border-top:1px solid var(--line-2); }
+  .bill-row.next{ background:var(--ok-bg); }
+  .bill-check{ width:24px; height:24px; border-radius:50%; display:grid; place-items:center; flex:none; }
+  .bill-check.ok{ background:#fff; border:1px solid var(--ok-line); color:var(--ok); }
+  .bill-check.up{ background:#fff; border:1px dashed #C9C9C9; color:var(--faint); }
+  .bill-check svg{ width:12px; height:12px; }
+  .bill-when{ min-width:0; }
+  .bill-date{ font-family:'JetBrains Mono'; font-size:.74rem; font-weight:600; color:var(--ink-soft); }
+  .bill-txn{ font-family:'JetBrains Mono'; font-size:.58rem; color:var(--faint); margin-top:1px; }
+  .bill-right{ margin-left:auto; text-align:right; flex:none; }
+  .bill-amt{ font-family:'Plus Jakarta Sans'; font-weight:700; font-size:.88rem; color:var(--ink); letter-spacing:-0.02em; }
+  .bill-st{ font-family:'JetBrains Mono'; font-size:.54rem; letter-spacing:.05em; text-transform:uppercase; font-weight:600; margin-top:1px; }
+  .bill-st.ok{ color:var(--ok); } .bill-st.up{ color:var(--faint); } .bill-st.fail{ color:var(--off); }
+  .bill-check.fail{ background:#fff; border:1px solid #E7CABF; color:var(--off); }
+  .bill-state.off{ color:var(--off); background:var(--off-bg); border-color:#E7CABF; }
+  .bill-state.off i{ background:var(--off); }
+  .bill-ava{ width:36px; height:36px; border-radius:50%; display:grid; place-items:center; flex:none; font-family:'Plus Jakarta Sans'; font-weight:700; font-size:.8rem; color:#fff; }
+  .bill-name{ font-family:'Plus Jakarta Sans'; font-weight:700; font-size:.92rem; color:var(--ink); letter-spacing:-0.02em; }
+  .bill-name .bill-handle{ font-family:'JetBrains Mono'; font-weight:400; font-size:.62rem; color:var(--faint); letter-spacing:0; margin-left:5px; }
+  .bill-row.removed{ background:var(--off-bg); }
+  .bill-flag{ font-family:'JetBrains Mono'; font-size:.58rem; color:var(--off); font-weight:600; margin-top:1px; }
+  .bill-foot{ display:flex; align-items:center; gap:8px; padding:12px 14px; border-top:1px solid var(--line-2); background:var(--surface); font-size:.74rem; color:var(--muted); }
+  .bill-foot svg{ width:15px; height:15px; color:var(--ok); flex:none; }
 
   /* ---------- feature viz: analytics metrics + earnings calculator ---------- */
   .metrics{ display:grid; grid-template-columns:repeat(2,1fr); gap:9px; margin-top:16px; }
@@ -1513,42 +1513,42 @@
           <div class="cell-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
           <h3>Collect recurring payments</h3>
           <p>No more &ldquo;hey, payment?&rdquo; DMs or screenshot checks. Pick a plan: monthly, yearly, or custom, and Subb collects payment on time.</p>
-          <div class="ad" role="img" aria-label="Payment history for member Jonas D. on the 49 dollar monthly plan. August 1 2026 charge was paid and he stayed active in the channel. July 1 and June 1 charges also succeeded.">
-            <div class="ad-bar">
-              <span class="ad-ava" style="background:#9C8B76" aria-hidden="true">JD</span>
+          <div class="bill" role="img" aria-label="Payment history for member Jonas D. on the 49 dollar monthly plan. August 1 2026 charge was paid and he stayed active in the channel. July 1 and June 1 charges also succeeded.">
+            <div class="bill-bar">
+              <span class="bill-ava" style="background:#9C8B76" aria-hidden="true">JD</span>
               <div>
-                <div class="ad-name">Jonas D. <span class="ad-handle">@jonasd</span></div>
-                <div class="ad-sub">$49 / mo <span class="ad-upi">AUTO-PAY</span></div>
+                <div class="bill-name">Jonas D. <span class="bill-handle">@jonasd</span></div>
+                <div class="bill-sub">$49 / mo <span class="bill-upi">AUTO-PAY</span></div>
               </div>
-              <span class="ad-state"><i></i> Active</span>
+              <span class="bill-state"><i></i> Active</span>
             </div>
-            <div class="ad-list">
-              <div class="ad-row">
-                <span class="ad-check ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div class="ad-when">
-                  <div class="ad-date">01 Aug 2026</div>
-                  <div class="ad-txn">Visa ··4242 · paid, in channel</div>
+            <div class="bill-list">
+              <div class="bill-row">
+                <span class="bill-check ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div class="bill-when">
+                  <div class="bill-date">01 Aug 2026</div>
+                  <div class="bill-txn">Visa ··4242 · paid, in channel</div>
                 </div>
-                <div class="ad-right"><div class="ad-amt">$49</div><div class="ad-st ok">Success</div></div>
+                <div class="bill-right"><div class="bill-amt">$49</div><div class="bill-st ok">Success</div></div>
               </div>
-              <div class="ad-row">
-                <span class="ad-check ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div class="ad-when">
-                  <div class="ad-date">01 Jul 2026</div>
-                  <div class="ad-txn">Visa ··4242 · paid, in channel</div>
+              <div class="bill-row">
+                <span class="bill-check ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div class="bill-when">
+                  <div class="bill-date">01 Jul 2026</div>
+                  <div class="bill-txn">Visa ··4242 · paid, in channel</div>
                 </div>
-                <div class="ad-right"><div class="ad-amt">$49</div><div class="ad-st ok">Success</div></div>
+                <div class="bill-right"><div class="bill-amt">$49</div><div class="bill-st ok">Success</div></div>
               </div>
-              <div class="ad-row">
-                <span class="ad-check ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                <div class="ad-when">
-                  <div class="ad-date">01 Jun 2026</div>
-                  <div class="ad-txn">Visa ··4242 · paid, in channel</div>
+              <div class="bill-row">
+                <span class="bill-check ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div class="bill-when">
+                  <div class="bill-date">01 Jun 2026</div>
+                  <div class="bill-txn">Visa ··4242 · paid, in channel</div>
                 </div>
-                <div class="ad-right"><div class="ad-amt">$49</div><div class="ad-st ok">Success</div></div>
+                <div class="bill-right"><div class="bill-amt">$49</div><div class="bill-st ok">Success</div></div>
               </div>
             </div>
-            <div class="ad-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> See each member's payment history and channel status in one place.</div>
+            <div class="bill-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> See each member's payment history and channel status in one place.</div>
           </div>
         </article>
 
